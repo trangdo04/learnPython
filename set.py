@@ -44,3 +44,14 @@ set1 = {3.4, 6, "do", 7}
 myset.update(set1)
 print(myset)
 print(type(myset))
+
+#list
+mylist = [1, "trang", 2, 3, 4]
+print(mylist)
+print("type", type(mylist))
+print("phan tu thu 3: ", mylist[2])
+print("ptu cuoi: ", mylist[-1])
+print("bo 3 phan tu dau: ", mylist[3:])
+print("3 phan tu dau: ", mylist[:3])
+print(mylist[-2:])
+print(mylist[2:4])
