@@ -1,5 +1,5 @@
 import types
-
+import math
 # setOfEvenNumbers = []
 
 # n = int(input())
@@ -55,3 +55,19 @@ print("bo 3 phan tu dau: ", mylist[3:])
 print("3 phan tu dau: ", mylist[:3])
 print(mylist[-2:])
 print(mylist[2:4])
+
+# Sap xep mot mang tang dan theo thu tu chan
+n = int(input())
+mang = []
+
+for i in range(0, n):
+    mang.append(int(input()))
+
+for i in range(0, math.floor((n-1)/2)):
+    for j in range(i+1, math.floor((n-1)/2) + 1):
+        if (mang[i * 2] > mang[j * 2]):
+            tmp = mang[i * 2]
+            mang[i * 2] = mang[j * 2]
+            mang[j * 2] = tmp
+
+print(mang)
