@@ -36,3 +36,27 @@ print("hieu: ", vector_subtract(v, w))
 print("c * w : ", soNhanVector(10, w))
 print("dot v and w : ", dot(v, w))
 print("distance v and w : ", distance(v, w))
+
+# Matrices
+def shape(A):
+    num_rows = len(A)
+    num_cols = len(A[0])
+    return num_rows, num_cols
+
+def getRow(A, i):
+    return A[i]
+
+def getCol(A, j):
+    return [A_i[j] for A_i in A]
+
+from typing import Callable
+def make_matrix(num_rows, num_cols, entry_fn):
+    return [[entry_fn(i, j) for j in range(num_cols)] for i in range(num_rows)]
+
+A = [[1,2], [4, 5], [8, 9]]
+B = [[1, 3, 5], [2, 4, 6]]
+print("shape of A: ", shape(A))
+print("rows: ", getRow(A,2))
+print("cols: ", getCol(A,1))
+
+# print("make matrix : ", make_matrix(len(A), len(A[i]), entry_fn))
